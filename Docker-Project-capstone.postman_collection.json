@@ -1,0 +1,572 @@
+{
+	"info": {
+		"_postman_id": "b988fbf2-d0f7-4224-8716-fef059ce8de9",
+		"name": "Docker-Project-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24733741"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"mot@gmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/login",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"ba@gmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/register",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home Page",
+			"item": [
+				{
+					"name": "Get Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/getImages",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"getImages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images By Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJoYWlAZ21haWwuY29tIiwiaWF0IjoxNjczODc2OTkyLCJleHAiOjE2NzM5MjAxOTJ9.u0udBOjhoI3BDlStLEVfWHyv54dmGU8H2xh5VPcCP9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/getImagesByName/Hinh 1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"getImagesByName",
+								"Hinh 1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Detail Page",
+			"item": [
+				{
+					"name": "Get Images By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJoYWlAZ21haWwuY29tIiwiaWF0IjoxNjczODc2OTkyLCJleHAiOjE2NzM5MjAxOTJ9.u0udBOjhoI3BDlStLEVfWHyv54dmGU8H2xh5VPcCP9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/getImagesById/1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"getImagesById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJoYWlAZ21haWwuY29tIiwiaWF0IjoxNjczODc2OTkyLCJleHAiOjE2NzM5MjAxOTJ9.u0udBOjhoI3BDlStLEVfWHyv54dmGU8H2xh5VPcCP9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/getImageCommentById/1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"getImageCommentById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\":\"nice\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/commentImage/1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"commentImage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/saveImage/1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"saveImage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images Saved By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/getImageSavedById/1",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"getImageSavedById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Page",
+			"item": [
+				{
+					"name": "Post Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJoYWlAZ21haWwuY29tIiwiaWF0IjoxNjczODc2OTkyLCJleHAiOjE2NzM5MjAxOTJ9.u0udBOjhoI3BDlStLEVfWHyv54dmGU8H2xh5VPcCP9Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"imageName\" : \"New Image\",\r\n  \"link\":\"https://www.planetware.com/wpimages/2019/11/canada-in-pictures-beautiful-places-to-photograph-morraine-lake.jpg\",\r\n  \"description\":\"...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/postImage",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"postImage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Profile Page",
+			"item": [
+				{
+					"name": "Update User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJiYUBnbWFpbC5jb20iLCJpYXQiOjE2NzM4ODYxODEsImV4cCI6MTY3MzkyOTM4MX0.sA0_tyqY_lJZCakeA9QXRYhold2ExFNu1tyIInwol9E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\": \"Ba\",\r\n  \"email\": \"ba_update@gmail.com\",\r\n  \"password\":\"1234\",\r\n  \"age\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/updateUser",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manage Page",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/getUsers",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"getUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image Save By User Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/getImagesSavedByUserId",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"getImagesSavedByUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images Posted By User Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/users/getImagesPostedByUserId",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"getImagesPostedByUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczODc4OTAzLCJleHAiOjE2NzM5MjIxMDN9.rJy8dJ22SXSdpkb4ymfEgB8lKOYG-hhCEdYzx1iC_fc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/images/deleteImage/15",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"deleteImage",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
