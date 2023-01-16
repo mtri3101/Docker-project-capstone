@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql
+    container_name: docker-project-capstone-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=docker-project-capstone
+    ports:
+      - 3306:3306
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docker-project-capstone-api
+    env_file:
+      - .env
+    ports:
+      - 4000:4000
+    depends_on:
+      - mysql
+    command: 
+      [
+        "/app/wait-for", 
+        "mysql:3306", 
+        "--", 
+        "node", 
+        "src/index.js"
+      ]
+
