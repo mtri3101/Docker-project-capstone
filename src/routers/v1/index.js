@@ -9,7 +9,7 @@ const v1 = express.Router();
 
 
 //Register, Login
-v1.post("/users", userController.createUser());
+v1.post("/users/register", userController.createUser());
 v1.post("/login", authController.login());
 
 //Page Home

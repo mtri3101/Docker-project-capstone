@@ -16,4 +16,4 @@ app.use("/api/v1", v1);
 
 app.use(handleErrors);
 
-app.listen(5000);
+app.listen(4000);
