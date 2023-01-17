@@ -43,7 +43,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Register",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -371,6 +371,39 @@
 								"v1",
 								"images",
 								"postImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjczOTE5NTQ1LCJleHAiOjE2NzM5NjI3NDV9.xLRbNKdLzQzEbwUQl69VFHkjBuqBje8slvz7_z5f76c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://docker-project-capstone-production.up.railway.app/api/v1/upload",
+							"protocol": "https",
+							"host": [
+								"docker-project-capstone-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"upload"
 							]
 						}
 					},
