@@ -136,7 +136,7 @@ const commentImage = async (token, imageId, content) => {
             throw new AppError(404, "Image not found");
         }
 
-        const user = await Image.findByPk(token.id)
+        const user = await User.findByPk(token.id)
         if (!user) {
             throw new AppError(401, "Invalid or expired token");
         }

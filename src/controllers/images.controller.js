@@ -77,8 +77,8 @@ const commentImage = () => {
     return async (req, res, next) => {
         try {
             const { imageId } = req.params;
-            const {user} = res.locals;
-            const {content } = req.body;
+            const { user } = res.locals;
+            const { content } = req.body;
             const comment = await imageService.commentImage(user, imageId, content)
             res.status(200).json(response({ data: comment }))
         } catch (error) {
@@ -91,7 +91,7 @@ const saveImage = () => {
     return async (req, res, next) => {
         try {
             const { imageId } = req.params;
-            const {user} = res.locals;
+            const { user } = res.locals;
             const comment = await imageService.saveImage(user, imageId)
             res.status(200).json(response({ data: comment }))
         } catch (error) {
@@ -117,7 +117,7 @@ const postImage = () => {
         try {
             const { user } = res.locals;
             const data = req.body;
-            const image = await imageService.postImage(user,data)
+            const image = await imageService.postImage(user, data)
             res.status(200).json(response({ data: image }))
         } catch (error) {
             next(error)
