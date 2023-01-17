@@ -108,7 +108,7 @@ const uploadFile = () => {
         }
         const tempUrl = `https://docker-project-capstone-production.up.railway.app/${file.path}`;
         const newUrl = tempUrl.replace("static\\", "");
-        res.status(200).json(response(tempUrl))
+        res.status(200).json(response(newUrl))
     };
 }
 
