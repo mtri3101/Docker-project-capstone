@@ -106,9 +106,9 @@ const uploadFile = () => {
         if (!file) {
             next(new AppError(400, "Please update a file"))
         }
-        const tempUrl = `https://docker-project-capstone-production.up.railway.app/static/${file.path}`;
+        const tempUrl = `https://docker-project-capstone-production.up.railway.app/${file.path}`;
         const newUrl = tempUrl.replace("static\\", "");
-        res.status(200).json(response(newUrl))
+        res.status(200).json(response(tempUrl))
     };
 }
 
