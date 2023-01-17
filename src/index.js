@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.static("./static"))
+app.use(express.static("."))
 
 sequelize.sync({ alter: true })
 

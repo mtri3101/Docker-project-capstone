@@ -2,7 +2,7 @@ const multer = require("multer");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, ".");
+    cb(null, "./static/");
   },
   filename: (req, file, cb) => {
     const prefix = Date.now() + "-" + Math.round(Math.random() * 1e9);
